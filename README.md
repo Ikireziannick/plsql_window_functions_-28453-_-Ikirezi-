@@ -35,7 +35,7 @@ orders(order_id, customer_id, book_id, quantity, order_date, total_amount)
 
 # INNER JOIN
 
-## SQL CODE
+### SQL CODE
 
 SELECT c.name AS customer_name,
        b.title AS book_title,
