@@ -35,3 +35,4 @@ Perform advanced analysis using window functions such as ranking, running totals
 Provide business insights that help improve marketing, stock management, and sales performance
 
 By the end of the project, the database should simulate a real-world online bookstore analytics system that supports data-driven business decisions.
+
