@@ -1,13 +1,12 @@
-# plsql_window_functions_-28453-_-Ikirezi-
-SQL JOINS &amp; Window Functions Project
-Online Bookstore Analytics Database System
-Business Context
+
+#Online Bookstore Analytics Database System
+##Business Context
 
 Online bookstores handle daily purchases from many customers ordering different books across various categories. As the number of orders increases, it becomes difficult to manually track which books sell the most, which customers purchase frequently, and how sales change over time.
 
 To support better decision-making, the bookstore requires a structured database system to store customer information, book details, and purchase transactions in an organized and relational format.
 
-Data Challenge
+##Data Challenge
 
 The bookstore collects large amounts of transactional data, but raw data alone does not provide useful insights. The main challenges include:
 
@@ -23,7 +22,7 @@ Comparing purchase behavior across time periods
 
 Without proper SQL JOINs and analytical functions, extracting these insights would be slow and inefficient.
 
-Expected Outcome
+##Expected Outcome
 
 The system is expected to:
 
