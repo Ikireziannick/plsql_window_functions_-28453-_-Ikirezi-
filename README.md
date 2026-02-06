@@ -9,16 +9,7 @@ To support better decision-making, the bookstore requires a structured database 
 ## Data Challenge
 
 The bookstore collects large amounts of transactional data, but raw data alone does not provide useful insights. The main challenges include:
-
-Identifying customers who have never placed an order
-
-Detecting books that have low or zero sales
-
-Monitoring daily and cumulative sales trends
-
-Ranking top customers and best-selling books
-
-Comparing purchase behavior across time periods
+Identifying customers who have never placed an order,Detecting books that have low or zero sales,Monitoring daily and cumulative sales trends,Ranking top customers and best-selling books,Comparing purchase behavior across time periods
 
 Without proper SQL JOINs and analytical functions, extracting these insights would be slow and inefficient.
 
@@ -26,13 +17,6 @@ Without proper SQL JOINs and analytical functions, extracting these insights wou
 
 The system is expected to:
 
-Store customers, books, and orders using related tables with primary and foreign keys
-
-Retrieve meaningful information using INNER, LEFT, RIGHT/FULL, and SELF JOINs
-
-Perform advanced analysis using window functions such as ranking, running totals, and customer segmentation
-
-Provide business insights that help improve marketing, stock management, and sales performance
-
+Store customers, books, and orders using related tables with primary and foreign keys,Retrieve meaningful information using INNER, LEFT, RIGHT/FULL, and SELF JOINs,Perform advanced analysis using window functions such as ranking, running totals, and customer segmentation,Provide business insights that help improve marketing, stock management, and sales performance.
 By the end of the project, the database should simulate a real-world online bookstore analytics system that supports data-driven business decisions.
 
