@@ -37,7 +37,7 @@ books(book_id, title, author, category, price, stock_quantity)
 
 orders(order_id, customer_id, book_id, quantity, order_date, total_amount)
 
-# INNER JOIN
+## INNER JOIN
 
 ### SQL CODE
 
@@ -53,7 +53,7 @@ INNER JOIN books b ON o.book_id = b.book_id;
 
 This query displays all completed purchases by matching customers with the books they bought. Only records that exist in all tables are shown.
 
-# LEFT JOIN
+## LEFT JOIN
 
 ### SQL CODE 
 
@@ -66,7 +66,7 @@ WHERE o.order_id IS NULL;
 
 This shows customers who have not placed any orders. It helps the bookstore identify inactive customers for promotions or marketing.
 
-# RIGHT JOIN
+## RIGHT JOIN
 
 ### SQL CODE
 
@@ -80,7 +80,7 @@ WHERE o.order_id IS NULL;
 This lists books that have never been purchased. It helps detect slow-moving or unpopular inventory.
 (If your database doesn’t support RIGHT JOIN, swap tables and use LEFT JOIN.)
 
-# FULL OUTER JOIN
+## FULL OUTER JOIN
 
 ### SQL CODE
 
@@ -94,7 +94,7 @@ ON c.customer_id = o.customer_id;
 This shows all customers and all orders, even when there is no match. It helps check for missing or unmatched records.
 (If FULL JOIN isn’t supported, combine LEFT + RIGHT with UNION.)
 
-# SELF JOIN
+## SELF JOIN
 
 ### SQL CODE
 
