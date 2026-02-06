@@ -1,6 +1,6 @@
 
-#Online Bookstore Analytics Database System
-##Business Context
+# Online Bookstore Analytics Database System
+## Business Context
 
 Online bookstores handle daily purchases from many customers ordering different books across various categories. As the number of orders increases, it becomes difficult to manually track which books sell the most, which customers purchase frequently, and how sales change over time.
 
