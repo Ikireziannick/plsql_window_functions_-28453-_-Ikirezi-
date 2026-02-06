@@ -26,7 +26,9 @@ By the end of the project, the database should simulate a real-world online book
 We’ll use only 3 tables:
 
 customers
+
 books
+
 orders
 
 customers(customer_id, name, email, city, join_date)
