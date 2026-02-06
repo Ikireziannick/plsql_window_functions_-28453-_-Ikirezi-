@@ -111,5 +111,70 @@ This compares customers within the same city. It helps analyze regional customer
 
 # Window Functions Implememntation
 
+## 1. Ranking Function (RANK)
+
+ Rank customers by total money spent
+ ### Query
+ 
+ SELECT 
+    c.customer_id,
+    c.name,
+    SUM(o.total_amount) AS total_spent,
+    RANK() OVER (ORDER BY SUM(o.total_amount) DESC) AS spending_rank
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.name;
+
+### Interpretation
+This query calculates how much each customer spent and ranks them from highest to lowest spender. It helps identify the bookstore’s top customers.
+
+## 2. Aggregate Window (Running Total)
+
+Track cumulative sales over time
+
+### Query
+
+SELECT 
+    order_date,
+    SUM(total_amount) AS daily_sales,
+    SUM(SUM(total_amount)) 
+        OVER (ORDER BY order_date) AS running_total
+FROM orders
+GROUP BY order_date;
+
+### Interpretation
+This shows daily sales and the cumulative total sales over time. It helps the bookstore monitor growth and overall performance.
+
+## 3. Navigation Function (LAG)
+
+Compare today’s sales with yesterday’s
+
+### Query
+
+SELECT 
+    order_date,
+    SUM(total_amount) AS daily_sales,
+    LAG(SUM(total_amount)) 
+        OVER (ORDER BY order_date) AS previous_day_sales
+FROM orders
+GROUP BY order_date;
+
+### Interpretation
+This compares each day’s sales with the previous day. It helps detect increases or decreases in sales trends.
+
+## 4. Distribution Function (NTILE)
+
+Divide customers into spending groups
+
+### Query
+SELECT 
+    customer_id,
+    SUM(total_amount) AS total_spent,
+    NTILE(4) OVER (ORDER BY SUM(total_amount)) AS spending_group
+FROM orders
+GROUP BY customer_id;
+
+### Interpretation
+This divides customers into four groups based on spending levels. It helps segment customers into low, medium, and high spenders for targeted marketing.
 
 
