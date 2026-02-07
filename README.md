@@ -179,4 +179,20 @@ GROUP BY customer_id;
 ### Interpretation
 This divides customers into four groups based on spending levels. It helps segment customers into low, medium, and high spenders for targeted marketing.
 
+# REFERENCES
+Oracle Base - Analytic Functions (Window Functions) https://oracle-base.com/articles/misc/analytic-functions
+
+Oracle Tutorial - Window Functions https://www.oracletutorial.com/oracle-analytic-functions/
+
+W3Schools - SQL Window Functions https://www.w3schools.com/sql/sql_window_functions.asp
+
+GeeksforGeeks - Window Functions in SQL https://www.geeksforgeeks.org/window-functions-in-sql/
+
+Oracle PL/SQL Programming Book by Steven Feuerstein https://www.oreilly.com/library/view/oracle-plsql-programming/9781497668005/
+
+https://www.w3schools.com/sql/sql_join.asp
+
+ youtube :https://youtu.be/G3lJAxg1cy8?si=FX5wG7xi0V6-M9VM
+
+
 
