@@ -25,17 +25,47 @@ By the end of the project, the database should simulate a real-world online book
 
 We’ll use only 3 tables:
 
-customers
-
-books
-
-orders
+### Customer table
 
 customers(customer_id, name, email, city, join_date)
 
-books(book_id, title, author, category, price, stock_quantity)
+ INSERT INTO customers (customer_id, name, email, city, join_date) VALUES
+(1, 'Alice Mukamana', 'alice@gmail.com', 'Kigali', '2025-01-10'),
+(2, 'Brian Uwase', 'brian@gmail.com', 'Huye', '2025-01-15'),
+(3, 'Claire Aline', 'claire@gmail.com', 'Musanze', '2025-02-01'),
+(4, 'David Imani', 'david@gmail.com', 'Kigali', '2025-02-10'),
+(5, 'Esther Keza', 'esther@gmail.com', 'Rubavu', '2025-02-20'),
+(6, 'Frank Bosco', 'frank@gmail.com', 'Kigali', '2025-03-01'); -- no orders (for LEFT JOIN test)
+books
+
+### Order table
 
 orders(order_id, customer_id, book_id, quantity, order_date, total_amount)
+
+INSERT INTO orders (order_id, customer_id, book_id, quantity, order_date, total_amount) VALUES
+(1, 1, 101, 2, '2025-03-01', 30.00),
+(2, 2, 103, 1, '2025-03-01', 10.00),
+(3, 1, 104, 1, '2025-03-02', 18.00),
+(4, 3, 102, 3, '2025-03-02', 37.50),
+(5, 4, 101, 1, '2025-03-03', 15.00),
+(6, 2, 105, 2, '2025-03-03', 28.00),
+(7, 5, 103, 4, '2025-03-04', 40.00),
+(8, 3, 104, 1, '2025-03-05', 18.00),
+(9, 1, 105, 1, '2025-03-06', 14.00);
+
+### Book table
+
+books(book_id, title, author, category, price, stock_quantity)
+
+INSERT INTO books (book_id, title, author, category, price, stock_quantity) VALUES
+(101, 'Atomic Habits', 'James Clear', 'Self-Help', 15.00, 50),
+(102, 'Think and Grow Rich', 'Napoleon Hill', 'Business', 12.50, 40),
+(103, 'The Alchemist', 'Paulo Coelho', 'Fiction', 10.00, 60),
+(104, 'Deep Work', 'Cal Newport', 'Productivity', 18.00, 30),
+(105, 'Rich Dad Poor Dad', 'Robert Kiyosaki', 'Finance', 14.00, 35),
+(106, 'Invisible Book', 'Unknown', 'Mystery', 20.00, 25); -- never sold
+
+
 
 ## INNER JOIN
 
@@ -190,9 +220,9 @@ GeeksforGeeks - Window Functions in SQL https://www.geeksforgeeks.org/window-fun
 
 Oracle PL/SQL Programming Book by Steven Feuerstein https://www.oreilly.com/library/view/oracle-plsql-programming/9781497668005/
 
-https://www.w3schools.com/sql/sql_join.asp
+ W3Schools - https://www.w3schools.com/sql/sql_join.asp
 
- youtube :https://youtu.be/G3lJAxg1cy8?si=FX5wG7xi0V6-M9VM
+ youtube tutorial :https://youtu.be/G3lJAxg1cy8?si=FX5wG7xi0V6-M9VM
 
 
 
