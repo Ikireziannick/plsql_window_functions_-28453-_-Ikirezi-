@@ -45,6 +45,7 @@ CREATE TABLE customers (
 (5, 'Esther Keza', 'esther@gmail.com', 'Rubavu', '2025-02-20'),
 (6, 'Frank Bosco', 'frank@gmail.com', 'Kigali', '2025-03-01'); -- no orders (for LEFT JOIN test)
 books
+<img width="706" height="233" alt="image" src="https://github.com/user-attachments/assets/4e4210b9-9e4f-49d6-a630-21f9b30e8921" />
 
 ### Order table
 
