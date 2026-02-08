@@ -95,6 +95,9 @@ INSERT INTO orders (order_id, customer_id, book_id, quantity, order_date, total_
 (8, 3, 104, 1, '2025-03-05', 18.00),
 (9, 1, 105, 1, '2025-03-06', 14.00);
 
+<img width="807" height="335" alt="image" src="https://github.com/user-attachments/assets/f9545021-3ea7-4098-8f8b-0a2ca13ae9ae" />
+
+
 ## INNER JOIN
 
 ### SQL CODE
