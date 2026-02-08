@@ -66,19 +66,7 @@ INSERT INTO orders (order_id, customer_id, book_id, quantity, order_date, total_
 
 ### Book table
 
-books(book_id, title, author, category, price, stock_quantity)
-
-CREATE TABLE orders (
-    order_id INT PRIMARY KEY,
-    customer_id INT,
-    book_id INT,
-    quantity INT,
-    order_date DATE,
-    total_amount DECIMAL(10,2),
-
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
-    FOREIGN KEY (book_id) REFERENCES books(book_id)
-);
+books(book_id, title, author, category, price, stock_quantity));
 CREATE TABLE books (
     book_id INT PRIMARY KEY,
     title VARCHAR(150) NOT NULL,
@@ -94,10 +82,9 @@ INSERT INTO books (book_id, title, author, category, price, stock_quantity) VALU
 (103, 'The Alchemist', 'Paulo Coelho', 'Fiction', 10.00, 60),
 (104, 'Deep Work', 'Cal Newport', 'Productivity', 18.00, 30),
 (105, 'Rich Dad Poor Dad', 'Robert Kiyosaki', 'Finance', 14.00, 35),
-(106, 'Invisible Book', 'Unknown', 'Mystery', 20.00, 25); -- never sold
+(106, 'Invisible Book', 'Unknown', 'Mystery', 20.00, 25); -- never sold);
 
-
-[](https://github.com/Ikireziannick/plsql_window_functions_-28453-_-Ikirezi-/blob/main/BOOK.jpeg?raw=true);
+<img width="916" height="262" alt="image" src="https://github.com/user-attachments/assets/2d19ddc0-a500-448b-8329-e9fad8b6be92" />
 ## INNER JOIN
 
 ### SQL CODE
