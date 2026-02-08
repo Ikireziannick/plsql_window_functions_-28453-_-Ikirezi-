@@ -21,6 +21,9 @@ Store customers, books, and orders using related tables with primary and foreign
 By the end of the project, the database should simulate a real-world online bookstore analytics system that supports data-driven business decisions.
 
 # ER DIAGRAM
+
+<img width="1182" height="768" alt="image" src="https://github.com/user-attachments/assets/2f14be43-50ec-49c8-b146-6949fd7e14c1" />
+
 # SQL JOINS IMPLEMENTATION
 
 We’ll use only 3 tables:
