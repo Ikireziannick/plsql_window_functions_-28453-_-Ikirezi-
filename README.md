@@ -29,6 +29,14 @@ We’ll use only 3 tables:
 
 customers(customer_id, name, email, city, join_date)
 
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    city VARCHAR(50),
+    join_date DATE
+);
+
  INSERT INTO customers (customer_id, name, email, city, join_date) VALUES
 (1, 'Alice Mukamana', 'alice@gmail.com', 'Kigali', '2025-01-10'),
 (2, 'Brian Uwase', 'brian@gmail.com', 'Huye', '2025-01-15'),
@@ -41,6 +49,8 @@ books
 ### Order table
 
 orders(order_id, customer_id, book_id, quantity, order_date, total_amount)
+
+
 
 INSERT INTO orders (order_id, customer_id, book_id, quantity, order_date, total_amount) VALUES
 (1, 1, 101, 2, '2025-03-01', 30.00),
@@ -56,6 +66,26 @@ INSERT INTO orders (order_id, customer_id, book_id, quantity, order_date, total_
 ### Book table
 
 books(book_id, title, author, category, price, stock_quantity)
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    book_id INT,
+    quantity INT,
+    order_date DATE,
+    total_amount DECIMAL(10,2),
+
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (book_id) REFERENCES books(book_id)
+);
+CREATE TABLE books (
+    book_id INT PRIMARY KEY,
+    title VARCHAR(150) NOT NULL,
+    author VARCHAR(100),
+    category VARCHAR(50),
+    price DECIMAL(10,2),
+    stock_quantity INT
+);
 
 INSERT INTO books (book_id, title, author, category, price, stock_quantity) VALUES
 (101, 'Atomic Habits', 'James Clear', 'Self-Help', 15.00, 50),
