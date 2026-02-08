@@ -96,7 +96,7 @@ INSERT INTO books (book_id, title, author, category, price, stock_quantity) VALU
 (106, 'Invisible Book', 'Unknown', 'Mystery', 20.00, 25); -- never sold
 
 
-
+[](https://github.com/Ikireziannick/plsql_window_functions_-28453-_-Ikirezi-/blob/main/BOOK.jpeg?raw=true)
 ## INNER JOIN
 
 ### SQL CODE
