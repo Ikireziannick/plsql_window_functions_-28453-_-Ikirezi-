@@ -175,7 +175,7 @@ AND a.customer_id < b.customer_id;
 This compares customers within the same city. It helps analyze regional customer groups.
 
 
-# Window Functions Implememntation
+# Window Functions Implementation
 
 ## 1. Ranking Function (RANK)
 
