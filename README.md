@@ -47,23 +47,6 @@ CREATE TABLE customers (
 books
 <img width="706" height="233" alt="image" src="https://github.com/user-attachments/assets/4e4210b9-9e4f-49d6-a630-21f9b30e8921" />
 
-### Order table
-
-orders(order_id, customer_id, book_id, quantity, order_date, total_amount)
-
-
-
-INSERT INTO orders (order_id, customer_id, book_id, quantity, order_date, total_amount) VALUES
-(1, 1, 101, 2, '2025-03-01', 30.00),
-(2, 2, 103, 1, '2025-03-01', 10.00),
-(3, 1, 104, 1, '2025-03-02', 18.00),
-(4, 3, 102, 3, '2025-03-02', 37.50),
-(5, 4, 101, 1, '2025-03-03', 15.00),
-(6, 2, 105, 2, '2025-03-03', 28.00),
-(7, 5, 103, 4, '2025-03-04', 40.00),
-(8, 3, 104, 1, '2025-03-05', 18.00),
-(9, 1, 105, 1, '2025-03-06', 14.00);
-
 ### Book table
 
 books(book_id, title, author, category, price, stock_quantity));
@@ -85,6 +68,33 @@ INSERT INTO books (book_id, title, author, category, price, stock_quantity) VALU
 (106, 'Invisible Book', 'Unknown', 'Mystery', 20.00, 25); -- never sold);
 
 <img width="916" height="262" alt="image" src="https://github.com/user-attachments/assets/2d19ddc0-a500-448b-8329-e9fad8b6be92" />
+
+### Order table
+
+orders(order_id, customer_id, book_id, quantity, order_date, total_amount)
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    book_id INT,
+    quantity INT,
+    order_date DATE,
+    total_amount DECIMAL(10,2),
+
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (book_id) REFERENCES books(book_id)
+);
+INSERT INTO orders (order_id, customer_id, book_id, quantity, order_date, total_amount) VALUES
+(1, 1, 101, 2, '2025-03-01', 30.00),
+(2, 2, 103, 1, '2025-03-01', 10.00),
+(3, 1, 104, 1, '2025-03-02', 18.00),
+(4, 3, 102, 3, '2025-03-02', 37.50),
+(5, 4, 101, 1, '2025-03-03', 15.00),
+(6, 2, 105, 2, '2025-03-03', 28.00),
+(7, 5, 103, 4, '2025-03-04', 40.00),
+(8, 3, 104, 1, '2025-03-05', 18.00),
+(9, 1, 105, 1, '2025-03-06', 14.00);
+
 ## INNER JOIN
 
 ### SQL CODE
